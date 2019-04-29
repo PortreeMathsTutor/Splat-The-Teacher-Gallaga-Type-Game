@@ -13,7 +13,7 @@ die("Could not connect: " . mysql_error());
 $name = mysqli_real_escape_string($conn, $_GET['name']);
 $score = mysqli_real_escape_string($conn, $_GET['score']);
 $hash = $_GET['hash'];
-$secretKey="3t96c5p3l61t9";
+$secretKey="";
 # Change this value to match the value stored in the client javascript below
 $real_hash = md5($name . $score . $secretKey);
 if($real_hash == $hash) {
